@@ -1,4 +1,4 @@
-import { FaPencilRuler } from "react-icons/fa"; // Icon from react-icons
+import { FaPencilRuler } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 
 const blogs = Array.from({ length: 24 }, (_, i) => ({
@@ -35,20 +35,29 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className={` group p-5 bg-neutral-900 border-1 border-gray-500 relative h-64 flex flex-col justify-between hover:bg-gradient-to-tr from-red-500 via-purple-500 to-pink-500  `}
+              className={`group p-5 bg-neutral-900 border border-gray-500 relative h-64 flex flex-col justify-between 
+                transition-colors duration-700 ease-in-out 
+                hover:bg-gradient-to-tr hover:from-red-500 hover:via-purple-500 hover:to-pink-500`}
             >
               <div className="flex justify-between items-center">
                 <FaPencilRuler size={24} />
                 <span className="text-sm">{blog.date}</span>
               </div>
-              <div>
+              <div
+                className="transition-all duration-500 ease-in-out 
+                 group-hover:-translate-y-5"
+              >
                 <p className="text-yellow-400 text-xs">{blog.category}</p>
                 <h3 className="text-lg font-semibold">{blog.title}</h3>
-
-                <button className="text-sm mt-2 text-white hidden  group-hover:block">
-                  Read More
-                </button>
               </div>
+
+              <button
+                className="absolute bottom-5 left-5 text-sm text-white opacity-0 
+      translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 
+      transition-all duration-500 ease-in-out"
+              >
+                Read More
+              </button>
             </div>
           ))}
         </div>

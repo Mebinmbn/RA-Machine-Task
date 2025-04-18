@@ -67,7 +67,7 @@ function Pricing() {
               className="rounded-2xl  bg-gradient-to-b from-gray-800 to-gray-900 px-6 py-16 shadow-lg hover:shadow-2xl transition-shadow "
             >
               <div className="mb-4">
-                <div className="w-4 h-4 rounded-full border-2 border-white mb-4"></div>
+                <div className="w-4 h-4 rounded-full border-3 border-white mb-4"></div>
                 <h2 className="text-2xl font-semibold mb-1">{plan.name}</h2>
                 <p className="text-sm text-gray-400 mb-6">{plan.description}</p>
                 <div className="flex mb-5">

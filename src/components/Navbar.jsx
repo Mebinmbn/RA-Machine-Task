@@ -1,12 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
+import { MdEditNote } from "react-icons/md";
+import { MdOutlineStickyNote2 } from "react-icons/md";
+import { IoBagRemoveSharp } from "react-icons/io5";
 
 function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef();
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -61,19 +63,19 @@ function Navbar() {
                 to="/about"
                 className="flex items-center gap-2 text-sm hover:text-purple-400 transition"
               >
-                🟣 About
+                <MdOutlineStickyNote2 /> About
               </Link>
               <Link
                 to="/blogs"
                 className="flex items-center gap-2 text-sm hover:text-purple-400 transition"
               >
-                🟠 Blogs
+                <MdEditNote /> Blogs
               </Link>
               <Link
                 to="/careers"
                 className="flex items-center gap-2 text-sm hover:text-purple-400 transition"
               >
-                🔴 Careers
+                <IoBagRemoveSharp /> Careers
               </Link>
             </div>
           )}
