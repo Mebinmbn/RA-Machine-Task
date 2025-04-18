@@ -40,4 +40,8 @@
   }
   
   
-  
+  .bg-pricing {
+    background: linear-gradient(135deg, rgba(11, 12, 26, 1) 0%, rgb(47, 47, 143) 100%),
+                radial-gradient(at top left, rgba(33, 50, 116, 0.4) 0%, transparent 60%);
+    background-blend-mode: overlay;
+  }

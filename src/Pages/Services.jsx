@@ -55,7 +55,7 @@ const services = [
   },
 ];
 
-const ServicesSection = () => {
+const Services = () => {
   return (
     <div className="relative overflow-hidden text-white">
       {/* Background Layer */}
@@ -176,4 +176,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default Services;
