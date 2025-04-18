@@ -58,7 +58,6 @@ const services = [
 const Services = () => {
   return (
     <div className="relative overflow-hidden text-white">
-      {/* Background Layer */}
       <div className="fixed inset-0 -z-10 animated-gradient "></div>
 
       {/* Content Section */}
